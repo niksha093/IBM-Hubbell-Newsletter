@@ -1,0 +1,190 @@
+
+
+
+ul.resp-tabs-list,
+.resp-tabs-list li {
+  font-weight: 600;
+  font-size: 14px;
+  /* display: inline-block; */
+  padding: 0px 20px;
+  margin: 0;
+  color:#737E86;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resp-tabs-container {
+  padding: 0px;
+  background-color: transparent;
+  clear: left;
+}
+
+h2.resp-accordion {
+  cursor: pointer;
+  padding: 5px;
+  display: none;
+}
+
+.resp-tab-content {
+  line-height: 25px;
+  display: none;
+  padding: 30px 0 0;
+  -webkit-transform: translate3d(0,0,0); 
+  transform: translate3d(0,0,0);
+  -webkit-transition: padding .2s ease-in-out;
+  transition: padding .2s ease-in-out;
+}
+
+.resp-tab-active {
+    border: 3px solid #cd9f58;
+    border-radius: 5px;
+    margin-bottom: -1px !important;
+    padding: 12px 14px 14px 14px !important;
+}
+
+ul.resp-tabs-list,
+.resp-tabs-list li.resp-tab-active {
+  border-bottom: none;
+  color:#cd9f58;
+}
+
+.resp-content-active,
+.resp-accordion-active { display: block;}
+
+.resp-tab-content { border-top: 2px solid #cd9f58;
+    overflow: hidden;
+    margin-top: 15px;
+    -webkit-transform: translate3d(0,0,0); 
+    transform: translate3d(0,0,0);
+    -webkit-transition: padding .2s ease-in-out;
+    transition: padding .2s ease-in-out; 
+    -webkit-transform: translate3d(0,0,0); 
+    
+  }
+
+h2.resp-accordion {
+    font-size: 15px;
+    border: 2px solid #cd9f58;
+    margin: 3px 0;
+    padding: 10px 15px;
+    color: #cd9f58;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+h2.resp-tab-active {
+  /* border-bottom: 0px solid #c1c1c1 !important; */
+  margin-bottom: 0px !important;
+  padding: 10px 15px !important;
+  border:2px solid #F79468;
+  color:#F79468;
+}
+
+h2.resp-tab-title:last-child {
+  border-bottom: 12px solid #c1c1c1 !important;
+  background: blue;
+}
+h2.resp-accordion:before {display: none;}
+
+/*-----------Vertical tabs-----------*/
+
+.resp-vtabs ul.resp-tabs-list {
+  float: left;
+  width: 30%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+  display: block;
+  padding: 15px 15px !important;
+  margin: 0;
+  cursor: pointer;
+  float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+  padding: 0px;
+  background-color: transparent;
+  border: 1px solid #c1c1c1;
+  float: left;
+  width: 68%;
+  min-height: 250px;
+  border-radius: 4px;
+  clear: none;
+}
+
+.resp-vtabs .resp-tab-content { border: none; }
+
+.resp-vtabs li.resp-tab-active {
+  border: 1px solid #c1c1c1;
+  border-right: none;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  margin-right: -1px !important;
+  padding: 14px 15px 15px 14px !important;
+}
+
+.resp-arrow {
+  width: 0;
+  height: 0;
+  float: right;
+  margin-top: 3px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #c1c1c1;
+  display: none;
+}
+
+h2.resp-tab-active span.resp-arrow {
+  border: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #9B9797;
+}
+
+/*-----------Accordion styles-----------*/
+
+h2.resp-tab-active { background:transparent;border-radius: 0px;}
+
+.resp-easy-accordion h2.resp-accordion { display: block; }
+
+.resp-easy-accordion .resp-tab-content { border: 1px solid #c1c1c1; }
+
+.resp-easy-accordion .resp-tab-content:last-child { border-bottom: 1px solid #c1c1c1 !important; }
+
+.resp-jfit {
+  width: 100%;
+  margin: 0px;
+}
+
+.resp-tab-content-active { display: block; }
+
+h2.resp-accordion:first-child { 
+  /* border-top: 1px solid #c1c1c1 !important;  */
+}
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 768px) {
+
+ul.resp-tabs-list { display: none; }
+
+h2.resp-accordion { display: block; }
+
+.resp-vtabs .resp-tab-content { border: 1px solid #C1C1C1; }
+
+.resp-vtabs .resp-tabs-container {
+  border: none;
+  float: none;
+  width: 100%;
+  min-height: initial;
+  clear: none;
+}
+
+.resp-accordion-closed { display: none !important; }
+
+.resp-vtabs .resp-tab-content:last-child { border-bottom: 1px solid #c1c1c1 !important; }
+}
